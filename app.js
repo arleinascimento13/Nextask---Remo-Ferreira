@@ -1,4 +1,4 @@
-import { showAlert } from "../funcs/alerts.js";
+import { showAlert } from "./funcs/alerts.js";
 
 const registerBtn = document.querySelector(".registerBtn");
 registerBtn.addEventListener("click", () => {
