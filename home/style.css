@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-family: lato;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .logo {
+     position: fixed;
+    top: 88px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 2.7rem;
+  }
+
+  button{
+    margin-top: 20px;
+    border-style: none;
+    border-end-end-radius: 25px;
+    border-start-start-radius: 25px;
+    border-start-end-radius: 25px;
+    border-end-start-radius: 25px;
+    width: 240px;
+    height: 40px;
+
+    color: white;
+  }
+  button:hover{
+     cursor: pointer;
+  }
+
+  .loginBtn {
+    background-color: rgba(54, 10, 126, 1);
+  }
+
+  .registerBtn {
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  .wave{
+     width: 100vw;
+     position: fixed;
+     bottom: -50px;
+  }
+}
