@@ -94,7 +94,7 @@
   }
 
   .inputs,
-  input[type="submit"] {
+  button[type="submit"] {
     border-style: solid;
     margin: 10px;
     border-radius: 20px;
@@ -104,6 +104,14 @@
     background-color: rgb(255, 255, 255, 0);
     backdrop-filter: blur(2.9px);
     border: 1px solid rgba(255, 255, 255, 0.42);
+    color: white;
+    transition: background-color 0.5s linear, color 0.5s linear;
+    cursor: pointer;
+  }
+
+  button[value="Entrar"]:hover {
+    background-color: white;
+    color: black;
   }
 
   .inputs {

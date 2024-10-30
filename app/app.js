@@ -1,17 +1,35 @@
 import { timer } from "./classTimer.mjs";
 
-const submit = document.querySelector("#submitButton");
-const display = document.querySelector("#timerDisplay");
+import { showLoading } from '../funcs/loading.js';
+import { showAlert } from "../funcs/alerts.js";
 
-submit.addEventListener("click", () => {
-     const name = document.querySelector("#nameInput") || "teste";
-     const hour = parseInt(document.querySelector("#hourInput")) || 0;
-     const min = parseInt(document.querySelector("#minInput")) || 0;
-     const seg = parseInt(document.querySelector("#segInput")) || 0;
+showLoading(7000);
+  showAlert({
+    title: "Carregando sistema!",
+    description: "",
+    color: "green",
+    duration: 7000,
+  });
 
-     const t1 = new timer();
-     t1.startTimer(name, [hour, min, seg], display);
-});
+// const submit = document.querySelector("#submitButton");
+// const display = document.querySelector("#timerDisplay");
+
+// submit.addEventListener("click", () => {
+//      const name = document.querySelector("#nameInput") || "teste";
+//      const hour = parseInt(document.querySelector("#hourInput")) || 0;
+//      const min = parseInt(document.querySelector("#minInput")) || 0;
+//      const seg = parseInt(document.querySelector("#segInput")) || 0;
+
+//      const t1 = new timer();
+//      t1.startTimer(name, [hour, min, seg], display);
+// });
+
+
+
+
+
+
+
 
 
 // const addCronometroBtn = document.getElementById("addCronometro");
