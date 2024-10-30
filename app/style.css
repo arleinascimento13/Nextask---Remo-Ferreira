@@ -1,3 +1,122 @@
-#popup{
-     display: none;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  font-family: lato;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup {
+  display: none;
+}
+
+#nav-bar {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.25);
+}
+
+#reward {
+  display: flex;
+  gap: 10px; /* Espaçamento entre as recompensas */
+}
+
+.reward1,
+.reward2,
+.reward3 {
+  width: 90px;
+  height: 120px;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.rewardValue {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.claimRewards {
+  display: flex;
+  justify-content: center; /* Centraliza as recompensas */
+  gap: 15px; /* Espaçamento entre as recompensas na linha */
+}
+
+/* img.coins-accountValue{
+} */
+.values {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.coins-accountValue {
+  height: 40%;
+  margin: 5px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.add-timer {
+  color: white;
+  border: none;
+  background-color: rgba(101, 85, 143, 1);
+  border-radius: 100px;
+  width: 127px;
+  height: 40px;
+  cursor: pointer;
+  margin: 40px;
+}
+
+.container {
+  position: relative;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: space-between;
+
+  width: 310px;
+  height: 90px;
+  background-color: rgba(217, 217, 217, 1);
+  margin: 20px;
+  border-radius: 11px;
+  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 25px solid red; /* Cor do canto */
+  border-left: 25px solid transparent;
+  border-top-right-radius: 8px;
 }

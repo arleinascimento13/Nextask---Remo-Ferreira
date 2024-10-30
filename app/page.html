@@ -1,27 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cronômetros Simultâneos</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cronômetros Simultâneos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <img src="src/state-layer.svg" />
+      <img src="src/logo.svg" />
+      <img src="src/icon.svg" />
+    </nav>
 
-<h1>Cronômetros Simultâneos</h1>
-<button id="addCronometro">Adicionar Cronômetro</button>
+    <div class="top">
+      <div class="claimRewards">
+        <div id="reward">
+          <div class="reward1">
+            <p>20min</p>
+            <img src="src/placeholder.svg" />
+            <div class="rewardValue">
+              <img src="src/coins-xxl.svg" />
+              <p>50</p>
+            </div>
+          </div>
 
-<div id="popup">
-  <h3>Digite o tempo desejado</h3>
-  <input type="number" id="horas" placeholder="Horas" min="0" max="23">
-  <input type="number" id="minutos" placeholder="Minutos" min="0" max="59">
-  <input type="number" id="segundos" placeholder="Segundos" min="0" max="59">
-  <button id="confirmar">Confirmar</button>
-</div>
+          <div class="reward2">
+            <p>40min</p>
+            <img src="src/placeholder.svg" />
+            <div class="rewardValue">
+              <img src="src/coins-xxl.svg" />
+              <p>80</p>
+            </div>
+          </div>
 
-<div id="cronometros" class="cronometro-container"></div>
+          <div class="reward3">
+            <p>60min</p>
+            <img src="src/placeholder.svg" />
+            <div class="rewardValue">
+              <img src="src/coins-xxl.svg" />
+              <p>120</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accountValue">
+        <div class="reward1">
+          <div class="values">
+            <img src="src/coins-xxl.svg" class="coins-accountValue" />
+            <p class="totalValueCoins">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<script type="module" src="app.js"></script>
+    <section>
+      <div class="container">
+        <div class="container-texts">
+          <p>placeholder</p>
+          <p>placeholder</p>
+        </div>
+        <div class="container-hour">
+          <p>0:00:00</p>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <button class="add-timer">New activity</button>
+
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
