@@ -16,7 +16,7 @@
   }
 
   .logo {
-     position: fixed;
+    position: fixed;
     top: 88px;
     height: 100px;
     width: 100px;
@@ -29,10 +29,10 @@
   }
 
   .title {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 
-  button{
+  button {
     margin-top: 20px;
     border-style: none;
     border-end-end-radius: 25px;
@@ -44,8 +44,8 @@
 
     color: white;
   }
-  button:hover{
-     cursor: pointer;
+  button:hover {
+    cursor: pointer;
   }
 
   .loginBtn {
@@ -56,9 +56,25 @@
     background-color: rgba(0, 0, 0, 1);
   }
 
-  .wave{
-     width: 100vw;
-     position: fixed;
-     bottom: -50px;
+  .wave {
+    width: 100vw;
+    position: fixed;
+    bottom: -50px;
+  }
+
+  .effect {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background:fixed;
+    transition: opacity 1s ease-out;
+    pointer-events: none;
+  }
+
+  .effect.visible{
+    display: block;
+    opacity: 1;
   }
 }

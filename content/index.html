@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img class="effect" src="/content/src/teste.png" />
+    <div class="root">
+      <img src="src/Logo.png" class="logo" />
+
+      <div class="container">
+        <p class="title">Login</p>
+
+        <div class="form">
+          <!-- <label for="usernameInput" class="usernameLabel">Username:</label> -->
+          <input
+            type="text"
+            id="usernameInput"
+            class="inputs"
+            placeholder="Usuário"
+          />
+
+          <input
+            type="password"
+            id="passwordInput"
+            class="inputs"
+            placeholder="Senha"
+          />
+
+          <div class="checkers">
+            <div class="rememberDiv">
+              <input type="checkbox" id="rememberCheckbox" />
+              <label for="rememberCheckbox">Remeber me</label>
+            </div>
+            <p class="forgotPassword">Forgot password?</p>
+          </div>
+
+          <input type="submit" value="" />
+          <script type="module" src="app.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

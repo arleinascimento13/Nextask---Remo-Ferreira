@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-family: lato;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .effect {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .root {
+    z-index: 0;
+    display: flex;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .root.visible {
+    opacity: 1;
+  }
+
+  .logo {
+    position: fixed;
+    top: 88px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .container {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 38px;
+    width: 318px;
+    height: 335px;
+
+    animation: pulsarShadow 2.5s linear infinite;
+
+    background-color: rgb(255, 255, 255, 0);
+    backdrop-filter: blur(2.9px);
+    -webkit-backdrop-filter: blur(2.9px);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    transition: background-color 1s ease;
+  }
+
+  @keyframes pulsarShadow {
+    0%,
+    100% {
+      box-shadow: 0px 0px 50px rgb(255, 255, 255, 0.1);
+    }
+    50% {
+      box-shadow: 0px 0px 60px rgb(255, 255, 255, 0.3);
+    }
+  }
+
+  .container:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+  }
+
+  label[for="passwordInput"] {
+    z-index: 1;
+    top: 181px;
+    position: absolute;
+    left: 35px;
+  }
+
+  label[for="usernameInput"] {
+    z-index: 1;
+    top: 121px;
+    position: absolute;
+    left: 35px;
+  }
+
+  .form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title {
+    color: white;
+    font-size: 2rem;
+  }
+
+  .inputs,
+  input[type="submit"] {
+    border-style: solid;
+    margin: 10px;
+    border-radius: 20px;
+    width: 280px;
+    height: 40px;
+
+    background-color: rgb(255, 255, 255, 0);
+    backdrop-filter: blur(2.9px);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+  }
+
+  .inputs {
+    color: white;
+    padding: 10px;
+  }
+
+  .inputs::placeholder {
+    color: white;
+    font-style: italic;
+  }
+
+  label[for="rememberCheckbox"] {
+    color: white;
+  }
+
+  .forgotPassword {
+    color: white;
+  }
+
+  .checkers {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .checkers > * {
+    margin-left: 21px;
+    margin-right: 21px;
+  }
+}
