@@ -1,3 +1,4 @@
+import { createPopup } from "../funcs/createpopup.js";
 import { showAlert } from "../funcs/alerts.js";
 import { createContainer } from "../funcs/createContainer.js";
 
@@ -14,6 +15,7 @@ const popup = document.querySelector(".popup-bg");
 const inputs = document.querySelectorAll(".inputslayout .numberInput");
 const inputName = document.querySelector(".labelInputName #nameInput");
 const optionValue = document.querySelector("#selectOptions");
+let totalCoins = document.querySelector(".totalValueCoins");
 
 submit.addEventListener("click", () => {
   popup.style.display = "flex";
@@ -51,29 +53,19 @@ confirm.addEventListener("click", () => {
   });
   createContainer(arrayValues);
   popup.style.display = "none";
+});
 
-///////////////////////////
+const reward1 = document.querySelector(".reward1");
+const reward2 = document.querySelector(".reward2");
+const reward3 = document.querySelector(".reward3");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+reward1.addEventListener("click", () => {
+  if (totalCoins.textContent < 20) {
+    alert("Você não pode comprar!");
+  } else {
+    totalCoins.textContent = totalCoins.textContent - 20;
+    createPopup("Agora você pode descançar!", "src/remophoto.png", 20);
+  }
 });
 
 function addCoins(x) {
