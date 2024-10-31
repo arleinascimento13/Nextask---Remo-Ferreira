@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="popup-bg">
+      <div class="popup">
+        <div class="labelInputName">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput">
+        </div>
+        <div class="inputslayout">
+          <input type="text" class="numberInput 1" />
+          <p>:</p>
+          <input type="text" class="numberInput 2" />
+          <input type="text" class="numberInput 3" />
+          <p>:</p>
+          <input type="text" class="numberInput 4" />
+          <input type="text" class="numberInput 5" />
+        </div>
+        <div class="div-selection">
+          <label for="selectOptions">Select difficult:</label>
+          <select name="" id="selectOptions">
+            <option value="green">Easy</option>
+            <option value="yellow">Medium</option>
+            <option value="red">Hard</option>
+          </select>
+        </div>
+        <button class="add-timer">Start</button>
+      </div>
+    </div>
+
     <nav id="nav-bar">
       <img src="src/state-layer.svg" />
       <img src="src/logo.svg" />
@@ -54,19 +81,10 @@
       </div>
     </div>
 
-    <section>
-      <div class="container">
-        <div class="container-texts">
-          <p>placeholder</p>
-          <p>placeholder</p>
-        </div>
-        <div class="container-hour">
-          <p>0:00:00</p>
-        </div>
-      </div>
+    <section class="all-activity">
     </section>
 
-    <button class="add-timer">New activity</button>
+    <button class="new-activity">New activity</button>
 
     <script type="module" src="app.js"></script>
   </body>

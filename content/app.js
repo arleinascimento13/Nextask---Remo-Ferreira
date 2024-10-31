@@ -15,7 +15,10 @@ submitForm.addEventListener("click", () => {
   const user = document.querySelector("#usernameInput").value;
   const password = document.querySelector("#passwordInput").value;
 
-  if (user == "remo.ferreira" && password == "bruxodobaralho") {
+  if (
+    (user == "remo.ferreira" && password == "bruxodobaralho") ||
+    (user == "adm" && password == "123")
+  ) {
     window.location.href = "../app/page.html";
   } else {
     showAlert({

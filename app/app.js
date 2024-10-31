@@ -1,75 +1,86 @@
-// import { timer } from "./classTimer.mjs";
+import { showAlert } from "../funcs/alerts.js";
+import { createContainer } from "../funcs/createContainer.js";
 
-// import { showLoading } from '../funcs/loading.js';
-// import { showAlert } from "../funcs/alerts.js";
-
-// // showLoading(7000);
-// //   showAlert({
-// //     title: "Carregando sistema!",
-// //     description: "",
-// //     color: "green",
-// //     duration: 7000,
-// //   });
-
-// const submit = document.querySelector("#submitButton");
-// const display = document.querySelector("#timerDisplay");
-
-// submit.addEventListener("click", () => {
-//      const name = document.querySelector("#nameInput") || "teste";
-//      const hour = parseInt(document.querySelector("#hourInput")) || 0;
-//      const min = parseInt(document.querySelector("#minInput")) || 0;
-//      const seg = parseInt(document.querySelector("#segInput")) || 0;
-
-//      const t1 = new timer();
-//      t1.startTimer(name, [hour, min, seg], display);
+// showLoading(7000);
+// showAlert({
+//   title: "Carregando sistema!",
+//   description: "",
+//   color: "green",
+//   duration: 7000,
 // });
 
-// // const addCronometroBtn = document.getElementById("addCronometro");
-// // const popup = document.getElementById("popup");
-// // const confirmarBtn = document.getElementById("confirmar");
-// // const cronometrosContainer = document.getElementById("cronometros");
+const submit = document.querySelector(".new-activity");
+const popup = document.querySelector(".popup-bg");
+const inputs = document.querySelectorAll(".inputslayout .numberInput");
+const inputName = document.querySelector(".labelInputName #nameInput");
+const optionValue = document.querySelector("#selectOptions");
 
-// // addCronometroBtn.addEventListener("click", () => {
-// //   popup.style.display = "block";
-// // });
+submit.addEventListener("click", () => {
+  popup.style.display = "flex";
+});
 
-// // confirmarBtn.addEventListener("click", () => {
-// //   const horas = parseInt(document.getElementById("horas").value) || 0;
-// //   const minutos = parseInt(document.getElementById("minutos").value) || 0;
-// //   const segundos = parseInt(document.getElementById("segundos").value) || 0;
-// //   const totalSegundos = horas * 3600 + minutos * 60 + segundos;
+const confirm = document.querySelector(".add-timer");
+confirm.addEventListener("click", () => {
+  let arrayValues = [];
+  inputs.forEach((input) => {
+    arrayValues.push(Number(input.value));
+  });
 
-// //   if (totalSegundos > 0) {
-// //     criarCronometro(totalSegundos);
-// //     popup.style.display = "none";
-// //     document.getElementById("horas").value = "";
-// //     document.getElementById("minutos").value = "";
-// //     document.getElementById("segundos").value = "";
-// //   } else {
-// //     alert("Por favor, insira um valor válido de tempo.");
-// //   }
-// // });
+  console.log(arrayValues);
 
-// // function criarCronometro(segundosIniciais) {
-// //   const cronometroDiv = document.createElement("div");
-// //   cronometroDiv.classList.add("cronometro");
-// //   cronometrosContainer.appendChild(cronometroDiv);
+  const [hour, minutes, seconds] = [
+    arrayValues[0],
+    arrayValues[1] + arrayValues[2],
+    arrayValues[3] + arrayValues[4],
+  ];
 
-// //   let segundosRestantes = segundosIniciais;
-// //   const timer = setInterval(() => {
-// //     const horas = Math.floor(segundosRestantes / 3600);
-// //     const minutos = Math.floor((segundosRestantes % 3600) / 60);
-// //     const segundos = segundosRestantes % 60;
+  if (minutes >= 60 || seconds >= 60 || inputName.value === "") {
+    return alert("Insira um valor válido!");
+  }
 
-// //     cronometroDiv.innerText = `${horas.toString().padStart(2, "0")}:${minutos
-// //       .toString()
-// //       .padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
+  arrayValues = [
+    [inputName.value],
+    [hour, minutes, seconds],
+    optionValue.value,
+  ];
 
-// //     if (segundosRestantes > 0) {
-// //       segundosRestantes--;
-// //     } else {
-// //       clearInterval(timer);
-// //       cronometroDiv.innerText = "Tempo esgotado!";
-// //     }
-// //   }, 1000);
-// // }
+  showAlert({
+    title: "Timer criado!",
+    color: "green",
+    duration: 5000,
+  });
+  createContainer(arrayValues);
+  popup.style.display = "none";
+
+///////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+function addCoins(x) {
+  let totalCoins = document.querySelector(".totalValueCoins");
+  let currentCoins = Number(totalCoins.textContent);
+  currentCoins += x;
+  totalCoins.textContent = currentCoins;
+}
+
+export { addCoins };
