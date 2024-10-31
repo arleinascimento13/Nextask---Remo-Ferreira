@@ -47,7 +47,7 @@ function createContainer(infoArray) {
         addCoins(60);
       }
       clearInterval(intervalId);
-      
+
       document.body.removeChild(container);
       return;
     }

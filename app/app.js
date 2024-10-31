@@ -1,6 +1,7 @@
 import { createPopup } from "../funcs/createpopup.js";
 import { showAlert } from "../funcs/alerts.js";
 import { createContainer } from "../funcs/createContainer.js";
+import { showLoading } from "../funcs/loading.js";
 
 // showLoading(7000);
 // showAlert({
@@ -60,11 +61,29 @@ const reward2 = document.querySelector(".reward2");
 const reward3 = document.querySelector(".reward3");
 
 reward1.addEventListener("click", () => {
-  if (totalCoins.textContent < 20) {
+  if (totalCoins.textContent < 50) {
     alert("Você não pode comprar!");
   } else {
-    totalCoins.textContent = totalCoins.textContent - 20;
+    totalCoins.textContent = totalCoins.textContent - 50;
     createPopup("Agora você pode descançar!", "src/remophoto.png", 20);
+  }
+});
+
+reward2.addEventListener("click", () => {
+  if (totalCoins.textContent < 80) {
+    alert("Você não pode comprar!");
+  } else {
+    totalCoins.textContent = totalCoins.textContent - 80;
+    createPopup("Agora você pode descançar!", "src/remophoto.png", 40);
+  }
+});
+
+reward3.addEventListener("click", () => {
+  if (totalCoins.textContent < 120) {
+    alert("Você não pode comprar!");
+  } else {
+    totalCoins.textContent = totalCoins.textContent - 120;
+    createPopup("Agora você pode descançar!", "src/remophoto.png", 60);
   }
 });
 
